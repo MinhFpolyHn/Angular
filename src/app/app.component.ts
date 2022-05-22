@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_we16304';
-  name = 'quanlvph1794';
+  name = 'minhmvph17968';
   class = 'we16304';
 
   teachers = [
@@ -77,6 +77,9 @@ export class AppComponent {
   inputValues = {
     name: '', // đang có ở Input
     age: '', // đang có ở input nhưng là chuỗi
+    gender : '0',
+    avatar : '',
+    status : '1'
   };
   
   // onInputName(event: any, info: string){
@@ -87,7 +90,7 @@ export class AppComponent {
   // }
 
   // key: 'name' | 'age' -> key chi dc la gia tri 'name' hoac 'age'
-  onInput(event: any, key: 'name' | 'age') {
+  onInput(event: any, key: 'name' | 'age' | 'gender' | 'avatar' | 'status') {
     this.inputValues[key] = event.target.value;
   }
 
@@ -98,16 +101,19 @@ export class AppComponent {
     this.teachers.push({
       ...this.inputValues,
       age: +this.inputValues.age, // đưa age từ chuỗi input về số,
-      gender : 0,
-      avatar : '',
-      status : 0,
+      gender : +this.inputValues.gender,
+      avatar : this.inputValues.avatar,
+      status : +this.inputValues.status,
       id : this.teachers.length +1
     })
     // cập nhật lại giá trị cho input ở form :
     //  [value] = "this.inputValues.name"
     this.inputValues = {
       name : '',
-      age : ''
+      age : '',
+      gender : '0',
+      avatar : '',
+      status : '0'
     }
     
   }

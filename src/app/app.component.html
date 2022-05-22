@@ -1,4 +1,10 @@
 <div class="container">
+  <div>
+    <h1>Angular Form</h1>
+    <div>
+     <app-form></app-form>
+    </div>
+  </div>
   <h1 (Click)="clickH1">DS Giáo Viên {{schoolName}}</h1>
   <div>
     <div>
@@ -15,6 +21,7 @@
             <input type="text" 
             class="form-control"
             (input)="onInput($event, 'name')"
+            [value] = "this.inputValues.name"
             >
           </div>
           <div>
@@ -22,7 +29,46 @@
             <input type="number"
             class="form-control"
             (input)="onInput($event, 'age')"
+            [value] = "this.inputValues.age"
             >
+          </div>
+          <div>
+            <label for="">Giới tính</label>
+            <input type="radio"
+            class="form-check"
+            (input)="onInput($event, 'gender')"
+            [checked] = "inputValues.gender === '1'"
+            [value] = "1"
+           >Nam
+            <input type="radio"
+            class="form-check"
+            (input)="onInput($event, 'gender')"
+            [checked] = "inputValues.gender === '0'"
+            [value] = "0"
+            >Nữ
+          </div>
+          <div>
+            <label for="">Avatar</label>
+            <input type="text"
+            class="form-control"
+            (input)="onInput($event, 'avatar')"
+            [value] = "this.inputValues.avatar"
+            >
+          </div>
+          <div>
+            <label for="">Trạng thái</label>
+            <input type="radio"
+            class="form-check"
+            (input)="onInput($event, 'status')"
+            [checked]="inputValues.status === '1'"
+            [value] = "1"
+            > Đang làm việc
+            <input type="radio"
+            class="form-check"
+            (input)="onInput($event, 'status')"
+            [checked]="inputValues.status === '0'" 
+            [value] = "0"
+            > Đã nghỉ
           </div>
           <div>
             <button type="button" (click)="onSubmit()" class="btn btn-success">Submit</button>
