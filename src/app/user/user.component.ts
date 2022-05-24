@@ -22,21 +22,21 @@ export class UserComponent implements OnInit {
   users = [
     {
       id: 1,
-      name: 'tuannda3',
-      age: 30,
-      email: 'tuannda3@fe.edu.vn',
+      name: 'minhmv',
+      age: 20,
+      email: 'minhmvph17968@fpt.edu.vn',
     },
     {
       id: 15,
-      name: 'tuannda2',
-      age: 30,
-      email: 'tuannda2@fe.edu.vn',
+      name: 'kientv',
+      age: 20,
+      email: 'kientv@fpt.edu.vn',
     },
     {
       id: 10,
-      name: 'tuannda4',
-      age: 30,
-      email: 'tuannda4@fe.edu.vn',
+      name: 'dungld',
+      age: 20,
+      email: 'dungld@fpt.edu.vn',
     },
   ];
 
