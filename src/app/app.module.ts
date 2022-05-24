@@ -14,6 +14,9 @@ import { TableNameComponent } from './table/table-name/table-name.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './show-validate/show-validate.component';
+import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserFormComponent } from './user/user-form/user-form.component';
 
 
 @NgModule({
@@ -28,6 +31,9 @@ import { ShowValidateComponent } from './show-validate/show-validate.component';
     TableNameComponent,
     FormComponent,
     ShowValidateComponent,
+    UserComponent,
+    UserListComponent,
+    UserFormComponent,
     
   ],
   imports: [
