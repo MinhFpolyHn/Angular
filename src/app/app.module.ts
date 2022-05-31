@@ -17,6 +17,16 @@ import { ShowValidateComponent } from './show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
+import { HomeComponent } from './home/home.component';
+import { LayoutsComponent } from './layouts/layouts.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -34,6 +44,15 @@ import { UserFormComponent } from './user/user-form/user-form.component';
     UserComponent,
     UserListComponent,
     UserFormComponent,
+    HomeComponent,
+    LayoutsComponent,
+    ClientLayoutComponent,
+    AdminLayoutComponent,
+    AdminProductListComponent,
+    AdminProductDetailComponent,
+    AdminProductFormComponent,
+    
+   
     
   ],
   imports: [
@@ -41,6 +60,7 @@ import { UserFormComponent } from './user/user-form/user-form.component';
     AppRoutingModule,
     NgbModule,
     FormsModule, // FormsModule duoc su dung o cac component da co ben tren
+    HttpClientModule
     
   ],
   providers: [],

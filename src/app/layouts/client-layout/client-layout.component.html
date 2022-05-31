@@ -1,0 +1,18 @@
+<div class="container">
+    <header>
+        <nav>
+            <ul>
+              <!-- Sử dụng routerLink thay vì href -->
+              <li><a routerLink="/">Home</a></li>
+              <li><a routerLink="/user">User</a></li>
+              <li><a routerLink="/admin">Admin</a></li>
+              
+            </ul>
+          </nav>
+    </header>
+    <div>
+        <!-- Đây là nơi những component thuộc client sẽ được render -->
+        <router-outlet></router-outlet>
+    </div>
+    <footer>FOOTER</footer>
+</div>
