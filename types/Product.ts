@@ -1,4 +1,10 @@
 export type Product = {
-    id:Number,
-    name:String
-}
+  id: number, // nếu dùng nodejs thì là string
+  name: string,
+  status: number
+};
+
+export type ProductCreate = {
+  name?: string,
+  status?: number
+};

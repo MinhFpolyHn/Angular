@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./avatar.component.css']
 })
 export class AvatarComponent implements OnInit {
-  @Input () avatar:String;
+  @Input () src:string;
   @Input () age: number;
 
   constructor() {
-    this.avatar = '';
+    this.src = '';
     this.age = 0;
    }
 

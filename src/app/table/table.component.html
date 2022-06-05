@@ -1,29 +1,34 @@
 <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Status</th>
-        <th>Avatar</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let teacher of teachers">
-        <td>{{teacher.id}}</td>
-        <td>
-          <app-table-name [name]="teacher.name"></app-table-name>
-        </td>
-        <td>{{teacher.age}}</td>
-        <td><app-table-gender [gender]="teacher.gender"></app-table-gender></td>
-        <td><app-status [status]="teacher.status"></app-status></td>
-        <td>
-          <!-- <img src={{teacher.avatar}} alt={{teacher.name}} height="100"> -->
-          <app-avatar [avatar]="teacher.avatar" [age]="teacher.age"></app-avatar>
-        </td>
-        <td>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Avatar</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let teacher of teachers">
+      <td>{{teacher.id}}</td>
+      <td>
+        <app-table-name [name]="teacher.name"></app-table-name>
+      </td>
+      <td>{{teacher.age}}</td>
+      <td>{{teacher.gender ? 'Nam' : 'Nữ'}}</td>
+      <td>
+        <app-avatar
+          [src]="teacher.avatar"
+          [age]="teacher.age"
+        ></app-avatar>
+        <!-- <img src={{teacher.avatar}} alt={{teacher.name}} height="100"> -->
+        <!-- <img [src]="teacher.avatar" [alt]="teacher.name" height="100"> -->
+      </td>
+      <td>
+        <span *ngIf="teacher.status === 1">Đang làm việc</span>
+        <span *ngIf="teacher.status === 0">Đã nghỉ</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

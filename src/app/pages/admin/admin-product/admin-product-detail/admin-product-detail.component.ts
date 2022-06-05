@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../../services/product.service';
-import { Product } from 'types/Product';
+import { Product } from 'types/Product'; 
 
 @Component({
   selector: 'app-admin-product-detail',
@@ -17,7 +17,8 @@ export class AdminProductDetailComponent implements OnInit {
   ) {
     this.product = {
       id: 0,
-      name: ''
+      name: '',
+      status: 0
     };
   }
 
@@ -28,6 +29,8 @@ export class AdminProductDetailComponent implements OnInit {
 
     this.productService.getProduct(idFromUrl).subscribe(data => {
       this.product = data;
+      // console.log(this.product);
+
     })
   }
 

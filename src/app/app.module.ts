@@ -12,6 +12,9 @@ import { StatusComponent } from './table/status/status.component';
 import { AvatarComponent } from './table/avatar/avatar.component';
 import { TableNameComponent } from './table/table-name/table-name.component';
 import { FormsModule } from '@angular/forms';
+// ReactiveFormsModule
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { FormComponent } from './form/form.component';
 import { ShowValidateComponent } from './show-validate/show-validate.component';
 import { UserComponent } from './user/user.component';
@@ -33,6 +36,7 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     TableComponent,
+    TableNameComponent,
     NameComponent,
     IdentityComponent,
     TableGenderComponent,
@@ -50,16 +54,16 @@ import {HttpClientModule} from '@angular/common/http';
     AdminLayoutComponent,
     AdminProductListComponent,
     AdminProductDetailComponent,
-    AdminProductFormComponent,
-    
-   
-    
+    AdminProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule, // FormsModule duoc su dung o cac component da co ben tren
+
+    FormsModule, // FormsModule được sử dụng ở các component đã có bên trên
+    ReactiveFormsModule,
+
     HttpClientModule
     
   ],
