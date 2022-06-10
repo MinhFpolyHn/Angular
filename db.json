@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 5,
-      "name": "product how to do",
+      "name": "product a12",
       "status": 1
     },
     {
@@ -36,11 +36,11 @@
       "id": 12
     }
   ],
-  "users" : [
+  "users": [
     {
       "id": 1,
       "email": "hoangkhanhminh@gmail.com",
-      "password":"$2a$12$hXyW1YTUQpWKfEZ252NuauotCegP9pQrmkqSkPV97ohtWtzty598m"
+      "password": "$2a$12$hXyW1YTUQpWKfEZ252NuauotCegP9pQrmkqSkPV97ohtWtzty598m"
     }
-  ] 
+  ]
 }

@@ -31,6 +31,11 @@ import { AdminProductFormComponent } from './pages/admin/admin-product/admin-pro
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { HeaderComponent } from './layouts/client-layout/header/header.component';
+import { BannerComponent } from './layouts/client-layout/banner/banner.component';
+import { ContentComponent } from './layouts/client-layout/content/content.component';
+import { FooterComponent } from './layouts/client-layout/footer/footer.component';
+
 
 
 
@@ -58,7 +63,13 @@ import { CartComponent } from './cart/cart.component';
     AdminProductDetailComponent,
     AdminProductFormComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    HeaderComponent,
+    BannerComponent,
+    ContentComponent,
+    FooterComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
