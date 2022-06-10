@@ -3,36 +3,50 @@
     {
       "id": 5,
       "name": "product a12",
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "status": 1
     },
     {
       "id": 6,
       "name": "Iphone 14",
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "status": 1
     },
     {
       "id": 7,
       "name": "Iphone 14",
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "status": 1
     },
     {
       "name": "new product",
       "status": 1,
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "id": 8
     },
     {
       "name": "product Iphone 15",
       "status": 1,
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "id": 10
     },
     {
       "name": "product Iphone 16 update",
       "status": 1,
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "id": 11
     },
     {
       "name": "product jpq",
       "status": 1,
+      "price":10,
+      "img":"https://tienganhfree.com/wp-content/uploads/2018/11/3126981015bb11e7ae28b9f83783eb34-1441.jpg",
       "id": 12
     }
   ],

@@ -21,6 +21,8 @@ export class AdminProductDetailComponent implements OnInit {
     this.product = {
       id: 0,
       name: '',
+      price:0,
+      img:"",
       status: 0
     };
   }
