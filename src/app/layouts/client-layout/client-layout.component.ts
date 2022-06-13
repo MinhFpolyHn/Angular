@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'types/Product';
 
 @Component({
   selector: 'app-client-layout',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientLayoutComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor(
+    
+  ) { 
+    
+  }
 
   ngOnInit(): void {
   }
+ 
 
 }

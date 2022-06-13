@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
-import { ProductService } from '../../../../services/product.service';
-import { Product, ProductCart } from 'types/Product'; 
+import { ProductService } from 'src/app/services/product.service';
+import { Product } from 'types/Product';
 
 @Component({
-  selector: 'app-admin-product-detail',
-  templateUrl: './admin-product-detail.component.html',
-  styleUrls: ['./admin-product-detail.component.css']
+  selector: 'app-product-detail',
+  templateUrl: './product-detail.component.html',
+  styleUrls: ['./product-detail.component.css']
 })
-export class AdminProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit {
+
   product: Product;
   cartItemValue: number = 1;
 

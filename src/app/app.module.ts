@@ -35,6 +35,8 @@ import { HeaderComponent } from './layouts/client-layout/header/header.component
 import { BannerComponent } from './layouts/client-layout/banner/banner.component';
 import { ContentComponent } from './layouts/client-layout/content/content.component';
 import { FooterComponent } from './layouts/client-layout/footer/footer.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { CartListComponent } from './cart-list/cart-list.component';
 
 
 
@@ -68,6 +70,8 @@ import { FooterComponent } from './layouts/client-layout/footer/footer.component
     BannerComponent,
     ContentComponent,
     FooterComponent,
+    ProductDetailComponent,
+    CartListComponent,
     
     
   ],

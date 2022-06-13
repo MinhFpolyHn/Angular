@@ -11,38 +11,43 @@
       <th>Name</th>
       <th>Price</th>
       <th>Img</th>
+      <th>Mô tả</th>
       <th>Status</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{product.id}}</td>
+      <td>{{product._id}}</td>
       <td>{{product.name}}</td>
       <td>{{product.price}}</td>
+      
       <td><img src={{product.img}} alt="" width="200" height="200"></td>
+      <td>{{product.desc}}</td>
       <td>
         <button
           *ngIf="product.status === 1"
           class="btn btn-success"
-          (click)="onUpdateStatus(product.id, 0)"
+          (click)="onUpdateStatus(product._id, 0)"
         >ON</button>
         <button
           *ngIf="product.status === 0"
           class="btn btn-dark"
-          (click)="onUpdateStatus(product.id, 1)"
+          (click)="onUpdateStatus(product._id, 1)"
         >OFF</button>
       </td>
       <td>
-        <a routerLink="/admin/products/{{product.id}}">Detail</a>
+        <a routerLink="/admin/products/{{product._id}}">Detail</a>
         <!-- <a [routerLink]="['/admin', 'products', product.id]">
           <button class="btn btn-info">Detail</button>
         </a> -->
-        <a routerLink="/admin/products/edit/{{product.id}}">
+        <a routerLink="/admin/products/edit/{{product._id}}">
           <button class="btn btn-warning">Edit</button>
         </a>
-        <button class="btn btn-danger" (click)="onDelete(product.id)">Delete</button>
+        <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button>
       </td>
     </tr>
+    <h4><a routerLink="/">Quay trở về trang chủ</a></h4>
+    
   </tbody>
 </table>

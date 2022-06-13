@@ -26,6 +26,17 @@ export class AdminProductFormComponent implements OnInit {
         this.onValidateNameHasProduct // chỉ gọi lại tên của hàm validate
       ]), // FormControl(giá trị mặc định)
       // price: new FormControl(0)
+      price: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(32),
+      ]),
+      img: new FormControl('', [
+        Validators.required,
+      ]),
+      desc: new FormControl('', [
+        Validators.required,
+      ]),
     });
     this.productId = '';
   }
@@ -34,10 +45,13 @@ export class AdminProductFormComponent implements OnInit {
     this.productId = this.activateRoute.snapshot.params['id']; // +'5'
 
     if (this.productId) {
-      this.productService.getProduct(+this.productId).subscribe(data => {
+      this.productService.getProduct(this.productId).subscribe(data => {
         // Cập nhật data cho form (data: {id: 5, name: '...'})
         this.productForm.patchValue({
           name: data.name,
+          price: data.price,
+          img: data.img,
+          desc: data.desc
           // price: data.price
         });
       })
@@ -54,7 +68,7 @@ export class AdminProductFormComponent implements OnInit {
   onValidateNameHasProduct (control: AbstractControl): ValidationErrors|null {
     const inputValue = control.value;
 
-    if (!inputValue.includes('product')) {
+    if (!inputValue.includes('Sach')) {
       return {hasProductError: true};
     }
 
